@@ -1,3 +1,6 @@
+insert into pessoas 
+(id, nome, sexo, peso, nacionalidade)
+values
 (DEFAULT, 'Roberto', 'M', 72.3, 'Italiano'),
     (DEFAULT, 'Fernanda', 'F', 65.9, 'Espanhola'),
     (DEFAULT, 'Ricardo', 'M', 81.7, DEFAULT),
