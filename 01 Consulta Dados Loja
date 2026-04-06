@@ -1,0 +1,29 @@
+create database loja
+default character SET utf8mb4
+collate utf8mb4_0900_ai_ci;
+drop database loja;
+use loja;
+
+CREATE TABLE IF NOT EXISTS carros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    marca VARCHAR(30),
+    modelo VARCHAR(30),
+    ano INT,
+    cor VARCHAR(20)
+) CHARACTER SET utf8mb4;
+
+select*from carros
+where ano= 2021;
+-- select coluna1, coluna2 from nome_tabela
+-- where coluna= 'valor';
+
+INSERT INTO carros (marca, modelo, ano, cor) VALUES
+('Toyota', 'Corolla', 2020, 'Prata'),
+('Honda', 'Civic', 2019, 'Preto'),
+('Ford', 'Fiesta', 2018, 'Branco'),
+('Chevrolet', 'Onix', 2021, 'Vermelho'),
+('Toyota', 'Etios', 2020, 'Prata'),
+('Honda', 'Civic', 2029, 'Vermelho'),
+('Ford', 'Fiesta', 2018, 'Branco'),
+('Chevrolet', 'Corsa', 2021, 'Vermelho'),
+('Hyundai', 'HB20', 2020, 'Prata');
