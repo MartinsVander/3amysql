@@ -1,0 +1,37 @@
+create database loja_carro
+default character SET utf8mb4
+collate utf8mb4_0900_ai_ci;
+use loja_carro;
+
+CREATE TABLE IF NOT EXISTS carros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    marca VARCHAR(30),
+    modelo VARCHAR(30),
+    ano INT,
+    cor VARCHAR(20)
+) CHARACTER SET utf8mb4;
+-- operadores: > , < ,>=,<=,!=,=
+-- or: OU   and: E
+select ano, modelo, cor from carros
+where cor = 'branco' or cor = 'prata';
+
+INSERT INTO carros (marca, modelo, ano, cor) VALUES
+('Volkswagen', 'Gol', 2010, 'Prata'),
+('Fiat', 'Palio', 2008, 'Preto'),
+('Chevrolet', 'Vectra', 2005, 'Cinza'),
+('Ford', 'Ka', 2012, 'Branco'),
+('Renault', 'Clio', 2007, 'Azul'),
+('Peugeot', '206', 2004, 'Vermelho'),
+('Toyota', 'Corolla', 2015, 'Preto'),
+('Honda', 'Fit', 2013, 'Prata'),
+('Nissan', 'March', 2016, 'Branco'),
+('Hyundai', 'i30', 2011, 'Cinza'),
+('Volkswagen', 'Fox', 2014, 'Vermelho'),
+('Fiat', 'Uno', 2009, 'Branco'),
+('Chevrolet', 'Classic', 2010, 'Prata'),
+('Ford', 'Focus', 2012, 'Preto'),
+('Renault', 'Sandero', 2015, 'Azul'),
+('Peugeot', '307', 2006, 'Cinza'),
+('Toyota', 'Hilux', 2018, 'Prata'),
+('Honda', 'City', 2017, 'Branco');
+
