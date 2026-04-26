@@ -1,0 +1,5 @@
+<svg viewBox="0 0 120 20" height="20" xmlns="http://www.w3.org/2000/svg" class="app-logo" style="display: block;">
+    <text x="0" y="14" font-family="Arial, sans-serif" font-weight="bold" font-size="18" letter-spacing="-0.5" fill="#1d1d1f">
+        Meu<tspan font-weight="300" fill="#0066cc">App</tspan>
+    </text>
+</svg>
