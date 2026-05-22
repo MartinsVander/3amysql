@@ -1,0 +1,25 @@
+
+create database loja_informatica
+default character SET utf8mb4
+collate utf8mb4_0900_ai_ci;
+use loja_informatica;
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    categoria VARCHAR(30),
+    preco DECIMAL(10,2),
+    estoque INT
+);
+
+INSERT INTO produtos (nome, categoria, preco, estoque) VALUES
+('Teclado Gamer', 'Periféricos', 150.00, 20),
+('Mouse Óptico', 'Periféricos', 50.00, 0),
+('Monitor 24p', 'Monitores', 800.00, 5),
+('Cadeira Office', 'Móveis', 450.00, 12),
+('Mousepad XL', 'Periféricos', 80.00, 50),
+('Notebook Dell', 'Informática', 3500.00, 8),
+('Headset Gamer', 'Periféricos', 200.00, 15),
+('Impressora HP', 'Informática', 600.00, 3),
+('Mesa Escritório', 'Móveis', 900.00, 6),
+('Webcam HD', 'Periféricos', 250.00, 25);
