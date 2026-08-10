@@ -1,0 +1,54 @@
+create database alterTable_nome
+default character set utf8mb4
+collate utf8mb4_0900_ai_ci;
+use update_nome;
+
+create table clientes (
+    id_cliente int auto_increment primary key,
+    nome varchar(30),
+    email varchar(30),
+    telefone varchar(15)
+);
+create table produtos (
+    id_produto int auto_increment primary key,
+    nome varchar(30),
+    preco decimal(10, 2),
+    estoque int
+);
+
+
+-- Ex 1. renomeando a coluna telefone para celular
+
+-- Ex 2. alterando o tamanho da coluna nome da tabela clientes para 50 caracteres
+
+-- Ex 3. adicionando a coluna cpf na tabela clientes
+
+-- Ex. removendo a coluna cpf da tabela clientes
+
+
+-- sintaxe
+-- add column → adiciona uma coluna.
+-- modify column → altera uma coluna.
+-- rename column nomeAntigo to novoNome  → renomeia uma coluna.
+-- drop column → exclui uma coluna.
+-- desc nome_tabela → mostra a estrutura da tabela.
+
+-- 4. adicionando a coluna categoria na tabela produtos
+
+
+-- 5. renomeando a coluna preco para valor
+
+
+-- 6. alterando o tamanho da coluna nome da tabela produtos para 50 caracteres
+;
+
+-- 7. adicionando a coluna data_cadastro na tabela clientes
+
+
+
+-- 8. removendo a coluna categoria da tabela produtos
+
+
+-- 9. adicionando a coluna ativo na tabela clientes
+
+
