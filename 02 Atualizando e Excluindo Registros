@@ -1,0 +1,39 @@
+-- Create (Criar) → Comando INSERT
+-- Read (Ler/Consultar) → Comando SELECT
+-- Update (Atualizar/Mudar) → Comando UPDATE
+-- Delete (Excluir/Apagar) → Comando DELETE
+
+create database loja_update;
+use loja_update;
+create table if not exists produtos (
+    id int auto_increment primary key,
+    nome varchar(50),
+    categoria varchar(30),
+    preco decimal(10,2),
+    estoque int
+) default charset = utf8mb4;
+insert into produtos
+(nome, categoria, preco, estoque) 
+values
+('Teclado Gamer', 'Periféricos', 150.00, 20),
+('Mouse Óptico', 'Periféricos', 50.00, 15),
+('Monitor 24"', 'Monitores', 900.00, 8),
+('Cadeira Gamer', 'Móveis', 1200.00, 5),
+('Webcam HD', 'Periféricos', 250.00, 12);
+-- atualizar registros
+UPDATE nome_tabela
+SET coluna = novo_valor
+WHERE condição;
+-- deletar registros
+DELETE FROM nome_da_tabela 
+WHERE condicao;
+
+
+-- 4.	Altere o estoque dos produtos da categoria Móveis para 10 unidades.
+-- 5.	Atualize o preço do produto Teclado Gamer para 180.00. 
+-- 6.	Altere o estoque da Webcam HD para 20 unidades. 
+-- 7.	Atualize o preço da Cadeira Gamer para 1100.00. 
+-- 8.	Modifique a categoria dos produtos Monitores para Informática. 
+-- 9.	Atualize o preço e o estoque do Mouse Óptico para 60.00 e 25 unidades. 
+-- 10.	Altere o estoque de todos os produtos da categoria Periféricos para 50. 
+-- 11.	Atualize o nome do produto Monitor 24" para Monitor LED 24". 
