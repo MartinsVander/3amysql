@@ -1,0 +1,44 @@
+create database if not exists clinica_nome
+default character set utf8mb4
+--  anotações
+collate utf8mb4_0900_ai_ci; 
+use clinica_nome;
+
+create table if not exists paciente (
+	id int primary key auto_increment,
+    nome varchar(30) not null,
+    data_nascimento date,
+    altura decimal(3,2),
+    status_cadastro boolean,
+    genero enum ('M','F','OUTRO')
+) character set utf8mb4;
+
+-- Atividade 01: inserir mais 5 registros de paciente (código completo) igual exemplo
+
+create table if not exists medico(
+	id int primary key auto_increment,
+    nome varchar(30)
+) character set utf8mb4;
+
+
+-- Atividade 02 inserir mais 5 registros de médico (código completo) igual exemplo
+create table if not exists consulta (
+	id int primary key auto_increment,
+    data_time datetime,
+    id_paciente int,
+    id_medico int,
+    foreign key (id_paciente) references paciente(id),
+    foreign key (id_medico) references medico(id)
+) character set utf8mb4;
+
+
+-- Atividade 03: Cadastrar (código completo) igual exemplo
+
+-- template consultas
+-- sintaxe consultar duas tabelas
+select tabela1.coluna1, tabela2.coluna2
+from tabela1
+inner join tabela2 
+on tabela1.coluna_chave = tabela2.coluna_chave;
+-- consultar todos os dados da tabela
+select*from nome_tabela;
