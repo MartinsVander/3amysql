@@ -1,0 +1,36 @@
+create table if not exists cliente (
+    id int auto_increment primary key,
+    nome varchar(100),
+    email varchar(100),
+    cidade varchar(50),
+    total_pedidos int
+) default charset = utf8mb4;
+
+insert into cliente (nome, email, cidade, total_pedidos) values
+('Ana Beatriz Silva', 'ana.beatriz@email.com', 'Campo Mourão', 12),
+('Carlos Eduardo Oliveira', 'cadu.oliver@email.com', 'Maringá', 5),
+('Bruno Santos', 'bruno.santos@email.com', 'Campo Mourão', 22),
+('Amanda Costa', 'amanda.c@email.com', 'Londrina', 3),
+('Fernando Silva Pedrosa', 'fernando.sp@email.com', 'Cascavel', 18),
+('Ana Clara Mendes', 'ana.clara@email.com', 'Maringá', 7),
+('Carlos Augusto Lima', 'carlos.guto@email.com', 'Campo Mourão', 14),
+('Ana Júlia Rocha', 'ana.julia@email.com', 'Londrina', 2),
+('Carlos Henrique Souza', 'carlos.hs@email.com', 'Cascavel', 9),
+('Amanda Vieira', 'amanda.v@email.com', 'Campo Mourão', 11),
+('Bruno Alencar', 'bruno.alencar@email.com', 'Maringá', 6);
+
+
+
+
+-- ORDER BY (Ordenação): ordenar o resultado da sua consulta 
+-- Sintaxe: SELECT colunas FROM tabela ORDER BY coluna;
+-- 20. Exiba todos itens do cardapio ordenado por valor.
+-- 21. Mostre todos os clientes ordenados pelo nome em ordem alfabética (A a Z).
+-- 22. Exiba os clientes ordenados  ordem de mais pedidos.
+
+-- LIKE Busca por nomes
+-- SELECT colunas FROM tabela WHERE coluna LIKE '%palavra%';
+-- 23. Busque todos os clientes cujo nome COMEÇA com Ana.
+-- 24. Selecione os clientes que possuem o sobrenome 'Silva' em qualquer parte do nome.
+-- 26. Mostre o nome e o total de pedidos dos clientes que moram em 'Campo Mourão'.
+-- 27. Busque os dados dos clientes que moram na cidade de 'Maringá'.
